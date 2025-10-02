@@ -1,39 +1,41 @@
 import { Container, Nav, Navbar } from "react-bootstrap";
-import { Link, Outlet } from "react-router";
 import { Toaster } from "react-hot-toast";
+import { Outlet } from "react-router";
 
 const navigation = [
   {
+    key: "inicio",
+    link: "#inicio",
+    label: "Início"
+  },
+  {
     key: "sobre",
-    label: "Sobre",
-    link: "#sobre"
+    link: "#sobre",
+    label: "Sobre"
   },
   {
     key: "projetos",
-    label: "Projetos",
-    link: "#projetos"
+    link: "#projetos",
+    label: "Projetos"
   },
   {
     key: "contato",
+    link: "#contato",
     label: "Contato",
-    link: "#contato"
   }
 ]
 
 export default function Layout() {
   return (
     <div className="d-flex flex-column min-vh-100">
-      <Navbar expand="sm" fixed="top" className="bg-body-tertiary border-bottom shadow-sm py-3">
+      <Navbar expand="md" fixed="top" className="bg-body-tertiary border-bottom shadow-sm py-3">
         <Container>
-          <Navbar.Brand as={Link} to="/">
+          <Navbar.Brand href="#inicio">
             <span className="fw-bold">Levi Moraes</span>
           </Navbar.Brand>
           <Navbar.Toggle />
           <Navbar.Collapse>
-            <Nav defaultActiveKey="inicio" className="me-auto">
-              <Nav.Item>
-                <Nav.Link eventKey="inicio" href="#inicio">Início</Nav.Link>
-              </Nav.Item>
+            <Nav defaultActiveKey="inicio" className="ms-auto">
               {navigation.map((item) => (
                 <Nav.Item key={item.key}>
                   <Nav.Link eventKey={item.key} href={item.link}>{item.label}</Nav.Link>
