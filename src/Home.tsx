@@ -1,9 +1,7 @@
 export default function Home() {
   return (
     <>
-      <h1 className="fw-bold">Olá, Mundo!</h1>
-
-      <section id="hero">
+      <section id="inicio">
         <h2>Início</h2>
       </section>
 
