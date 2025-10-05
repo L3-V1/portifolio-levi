@@ -28,7 +28,11 @@ const navigation = [
 export default function Layout() {
   return (
     <div className="d-flex flex-column min-vh-100">
-      <Navbar expand="md" fixed="top" className="bg-body-tertiary border-bottom shadow-sm py-3">
+      <Navbar
+        expand="md"
+        sticky="top"
+        className="bg-body-tertiary border-bottom shadow-sm"
+      >
         <Container>
           <Navbar.Brand href="#inicio">
             <span className="fw-bold">Levi Moraes</span>
@@ -46,9 +50,7 @@ export default function Layout() {
         </Container>
       </Navbar>
       <div className="flex-grow-1">
-        <div style={{ paddingTop: "6rem" }}>
-          <Outlet />
-        </div>
+        <Outlet />
       </div>
       <Toaster />
     </div>
