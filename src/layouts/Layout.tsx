@@ -39,7 +39,7 @@ export default function Layout() {
           </Navbar.Brand>
           <Navbar.Toggle />
           <Navbar.Collapse>
-            <Nav defaultActiveKey="inicio" className="ms-auto">
+            <Nav defaultActiveKey={navigation[0].key} className="ms-auto">
               {navigation.map((item) => (
                 <Nav.Item key={item.key}>
                   <Nav.Link eventKey={item.key} href={item.link}>{item.label}</Nav.Link>
