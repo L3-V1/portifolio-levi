@@ -1,40 +1,49 @@
+import * as Styled from "../components/Styled"
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { Toaster } from "react-hot-toast";
 import { Outlet } from "react-router";
+import Hero from "../components/Hero";
+import Sobre from "../components/Sobre";
+import Projetos from "../components/Projetos";
+import Contato from "../components/Contato";
 
-const navigation = [
+export const navigation = [
   {
     key: "inicio",
     link: "#inicio",
-    label: "Início"
+    label: "Início",
+    component: <Hero />
   },
   {
     key: "sobre",
     link: "#sobre",
-    label: "Sobre"
+    label: "Sobre",
+    component: <Sobre />
   },
   {
     key: "projetos",
     link: "#projetos",
-    label: "Projetos"
+    label: "Projetos",
+    component: <Projetos />
   },
   {
     key: "contato",
     link: "#contato",
     label: "Contato",
+    component: <Contato />
   }
 ]
 
 export default function Layout() {
   return (
-    <div className="d-flex flex-column min-vh-100">
+    <Styled.Layout>
       <Navbar
         expand="md"
         sticky="top"
         className="bg-body-tertiary border-bottom shadow-sm"
       >
         <Container>
-          <Navbar.Brand href="#inicio">
+          <Navbar.Brand href={navigation[0].link}>
             <span className="fw-bold">Levi Moraes</span>
           </Navbar.Brand>
           <Navbar.Toggle />
@@ -53,6 +62,6 @@ export default function Layout() {
         <Outlet />
       </div>
       <Toaster />
-    </div>
+    </Styled.Layout>
   )
 }

@@ -1,10 +1,11 @@
+import * as Styled from "./Styled"
 import { Button, Card } from "react-bootstrap";
 import { AlertTriangle } from "lucide-react";
 import { LinkContainer } from "react-router-bootstrap";
 
 export default function NotFound() {
   return (
-    <div className="d-flex justify-content-center align-items-center min-vh-100">
+    <Styled.Fullscreen>
       <Card className="text-center shadow-lg border-0 rounded-4 p-5" style={{ maxWidth: "500px" }}>
         <Card.Body>
           <AlertTriangle className="text-danger mb-3" size={60} strokeWidth={1.5} />
@@ -22,6 +23,6 @@ export default function NotFound() {
           </LinkContainer>
         </Card.Body>
       </Card>
-    </div>
+    </Styled.Fullscreen>
   )
 }
