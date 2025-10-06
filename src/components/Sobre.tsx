@@ -1,5 +1,7 @@
 export default function Sobre() {
   return (
-    <h2>Sobre mim</h2>
+    <section id="sobre" className="wrapper">
+      <h2>Sobre mim</h2>
+    </section>
   )
 }

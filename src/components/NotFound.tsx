@@ -1,12 +1,28 @@
-import * as Styled from "./Styled"
 import { Button, Card } from "react-bootstrap";
 import { AlertTriangle } from "lucide-react";
 import { LinkContainer } from "react-router-bootstrap";
+import styled from "styled-components";
+
+const Container = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+`
+
+const StyledCard = styled(Card)`
+  max-width: 500px;
+  padding: 3rem;
+  margin: 0 auto;
+  text-align: center;
+  box-shadow: var(--bs-box-shadow-lg);
+  border-radius: var(--bs-border-radius-lg);
+`
 
 export default function NotFound() {
   return (
-    <Styled.Fullscreen>
-      <Card className="text-center shadow-lg border-0 rounded-4 p-5" style={{ maxWidth: "500px" }}>
+    <Container>
+      <StyledCard>
         <Card.Body>
           <AlertTriangle className="text-danger mb-3" size={60} strokeWidth={1.5} />
           <h1 className="display-3 fw-bold text-danger">404</h1>
@@ -22,7 +38,7 @@ export default function NotFound() {
             </Button>
           </LinkContainer>
         </Card.Body>
-      </Card>
-    </Styled.Fullscreen>
+      </StyledCard>
+    </Container>
   )
 }

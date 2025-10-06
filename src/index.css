@@ -16,3 +16,8 @@ body {
 .navbar {
   min-height: var(--navbar-height);
 }
+
+.wrapper {
+  height: calc(100vh - var(--navbar-height));
+  scroll-margin-top: var(--navbar-height);
+}

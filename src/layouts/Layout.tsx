@@ -1,4 +1,3 @@
-import * as Styled from "../components/Styled"
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { Toaster } from "react-hot-toast";
 import { Outlet } from "react-router";
@@ -36,7 +35,7 @@ export const navigation = [
 
 export default function Layout() {
   return (
-    <Styled.Layout>
+    <div className="d-flex flex-column min-vh-100">
       <Navbar
         expand="md"
         sticky="top"
@@ -62,6 +61,6 @@ export default function Layout() {
         <Outlet />
       </div>
       <Toaster />
-    </Styled.Layout>
+    </div>
   )
 }
