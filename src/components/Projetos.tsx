@@ -1,7 +1,9 @@
+import Section from "./styles/Section";
+
 export default function Projetos() {
   return (
-    <section id="projetos" className="wrapper">
+    <Section id="projetos">
       <h2>Projetos</h2>
-    </section>
+    </Section>
   )
 }

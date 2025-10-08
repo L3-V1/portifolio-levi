@@ -8,7 +8,7 @@ interface FadeProps {
   inView?: boolean
 }
 
-export const Fade = styled.div<FadeProps>`
+const Fade = styled.div<FadeProps>`
   opacity: 0;
   ${({ 
     direction = "right",
@@ -29,3 +29,5 @@ export const Fade = styled.div<FadeProps>`
     `} ${duration} ease-out ${delay} forwards;
   `}
 `
+
+export default Fade

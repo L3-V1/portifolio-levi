@@ -1,7 +1,9 @@
+import Section from "./styles/Section";
+
 export default function Sobre() {
   return (
-    <section id="sobre" className="wrapper">
+    <Section id="sobre">
       <h2>Sobre mim</h2>
-    </section>
+    </Section>
   )
 }

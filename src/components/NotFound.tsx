@@ -3,26 +3,19 @@ import { AlertTriangle } from "lucide-react";
 import { LinkContainer } from "react-router-bootstrap";
 import styled from "styled-components";
 
-const Container = styled.div`
+const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
-`
-
-const StyledCard = styled(Card)`
-  max-width: 500px;
-  padding: 3rem;
   margin: 0 auto;
-  text-align: center;
-  box-shadow: var(--bs-box-shadow-lg);
-  border-radius: var(--bs-border-radius-lg);
+  max-width: 500px;
+  min-height: 100vh;
 `
 
 export default function NotFound() {
   return (
-    <Container>
-      <StyledCard>
+    <Wrapper className="px-4 px-lg-0">
+      <Card className="text-center shadow-lg rounded-4 p-5">
         <Card.Body>
           <AlertTriangle className="text-danger mb-3" size={60} strokeWidth={1.5} />
           <h1 className="display-3 fw-bold text-danger">404</h1>
@@ -38,7 +31,7 @@ export default function NotFound() {
             </Button>
           </LinkContainer>
         </Card.Body>
-      </StyledCard>
-    </Container>
+      </Card>
+    </Wrapper>
   )
 }

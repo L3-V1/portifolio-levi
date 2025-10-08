@@ -1,7 +1,9 @@
+import Section from "./styles/Section";
+
 export default function Contato() {
   return (
-    <section id="contato" className="wrapper">
+    <Section id="contato">
       <h2>Contato</h2>
-    </section>
+    </Section>
   )
 }
