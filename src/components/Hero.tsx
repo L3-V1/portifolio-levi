@@ -2,16 +2,8 @@ import { Col, Row } from 'react-bootstrap'
 import { useInView } from '../hooks/useInView'
 import Fade from './styles/Fade'
 import Section from './styles/Section'
+import Wrapper from './styles/Wrapper'
 import styled from 'styled-components'
-
-const Wrapper = styled.div`
-  display: flex;
-  align-items: center;
-  margin: 0 auto;
-  height: 100%;
-  max-width: 60rem;
-  padding: 0 1.5rem;
-`
 
 const Description = styled.p`
   margin-bottom: 0;
@@ -24,7 +16,7 @@ export default function Hero() {
 
   return (
     <Section id="inicio">
-      <Wrapper>
+      <Wrapper maxWidth={72}>
         <Row className="g-3 align-items-center">
           <Col xs="12" md="6">
             <Fade ref={leftRef} inView={leftInView} direction="left">

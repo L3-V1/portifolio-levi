@@ -1,14 +1,12 @@
 import styled, { css, keyframes } from "styled-components";
 
-interface FadeProps {
-  direction?: "left" | "right"
-  distance?: string
-  duration?: string
-  delay?: string
+const Fade = styled.div<{
+  direction?: "left" | "right",
+  distance?: string,
+  duration?: string,
+  delay?: string,
   inView?: boolean
-}
-
-const Fade = styled.div<FadeProps>`
+}>`
   opacity: 0;
   ${({ 
     direction = "right",

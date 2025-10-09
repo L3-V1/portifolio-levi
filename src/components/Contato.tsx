@@ -1,9 +1,12 @@
 import Section from "./styles/Section";
+import Wrapper from "./styles/Wrapper";
 
 export default function Contato() {
   return (
     <Section id="contato">
-      <h2>Contato</h2>
+      <Wrapper maxWidth={72}>
+        <div className="display-4">Contato</div>
+      </Wrapper>
     </Section>
   )
 }
